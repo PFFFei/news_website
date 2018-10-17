@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>新闻网站的数据分析</title>
+	<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+	<script src="/static/bootstrap/jquery/jquery.min.js"></script>
+	<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+	<style>
+   	.fakeimg {
+       height: 400px;
+    }
+    .img-thumbnail{
+    	height: 400px;
+    	width: 800px;
+    }
+ 	</style>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>新闻网站的数据分析</h1>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Python</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">主 页</a></li>
+        <li><a href="#">词 云</a></li>
+        <li><a href="#">关 于</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{% load static %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>新闻链接</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">资讯</a></li>
+        <li><a href="#">军事</a></li>
+        <li><a href="#">体育</a></li>
+        <li><a href="#">娱乐</a></li>
+        <li><a href="#">财经</a></li>
+      </ul>
+      <h2>新闻点击量比例</h2>
+      <div class="fakeimg"><img src="{% static "figure/Total.png" %}" height="400px" width="360px"></div>
+      <hr class="hidden-sm hidden-md hidden-lg">
+    </div>
+    <div class="col-sm-8">
+      <h2 class="I">资讯</h2>
+      <div class="fakeimg"><img src="{% static "figure/Information.png" %}" class="img-thumbnail"></div>
+      <br>
+      <h2 class="M">军事</h2>
+      <div class="fakeimg"><img src="{% static "figure/Military.png" %}" class="img-thumbnail"></div>
+      <h2 class="S">体育</h2>
+      <div class="fakeimg"><img src="{% static "figure/Sports.png" %}" class="img-thumbnail"></div>
+      <h2 class="E">娱乐</h2>
+      <div class="fakeimg"><img src="{% static "figure/Entertainment.png" %}" class="img-thumbnail"></div>
+      <h2 class="F">财经</h2>
+      <div class="fakeimg"><img src="{% static "figure/Finance.png" %}" class="img-thumbnail"></div>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> 河北金融学院版权所有</p>
+</div>
+
+</body>
+</html>
